@@ -53,4 +53,25 @@
   direction: GZ_TO_ROS
 
 # TODO (Step 3): add depth camera entries here
+
+# Depth Camera Point Cloud
+- ros_topic_name: "camera/depth/points"
+  gz_topic_name: "/depth_camera/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  direction: GZ_TO_ROS
+
+# Depth Camera Image
+- ros_topic_name: "camera/depth/image_raw"
+  gz_topic_name: "/depth_camera/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
 # TODO (Step 4): add GNSS entry here
+
+# GNSS Sensor
+- ros_topic_name: "fix"
+  gz_topic_name: "navsat"
+  ros_type_name: "sensor_msgs/msg/NavSatFix"
+  gz_type_name: "gz.msgs.NavSat"
+  direction: GZ_TO_ROS
